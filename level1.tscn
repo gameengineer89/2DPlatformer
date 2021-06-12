@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://yasin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://asset/floor.jpeg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 227.11, 23.425 )
+
+[node name="level1" type="Node2D"]
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2( 0, 0.56012 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="floor"]
+position = Vector2( 228.19, 572.676 )
+scale = Vector2( 0.476502, 0.115547 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 227.394, 572.406 )
+shape = SubResource( 1 )
+
+[node name="floor2" type="StaticBody2D" parent="."]
+position = Vector2( 565.125, 0.560181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="floor2"]
+position = Vector2( 228.19, 572.676 )
+scale = Vector2( 0.476502, 0.115547 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2"]
+position = Vector2( 227.394, 572.406 )
+shape = SubResource( 1 )
+
+[node name="yasin" parent="." instance=ExtResource( 1 )]
+position = Vector2( 164.605, 395.966 )
